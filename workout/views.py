@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Workout
-from .forms import WorkoutForm
+from .forms import WorkoutForm, ContactForm
 from django.contrib.auth.decorators import login_required
 
 
@@ -44,6 +44,7 @@ def delete_workout(request, id):
     return redirect('index')
 
 
+@login_required(login_url='login')
 def update_workout(request, id):
     task = Workout.objects.get(id=id)
     form = WorkoutForm(request.POST or None, instance=task)
@@ -52,6 +53,20 @@ def update_workout(request, id):
         return redirect('index')
 
     return render(request, 'workout/update.html', {'form': form})
+
+
+@login_required(login_url='login')
+def contact(request):
+    form = ContactForm(request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            # Assign the current user as the user (i.e., owner) for each task
+            form.instance.user = request.user
+            form.save()
+            return redirect('index')
+
+    context = {'form': form}
+    return render(request, 'workout/contact.html', context)
 #
 #
 # def complete_workout(request, id):

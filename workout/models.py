@@ -10,7 +10,15 @@ class Workout(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     workout = models.CharField(max_length=200)
     created_at = models.DateTimeField(auto_now_add=True, blank=True)
+
     # complete = models.BooleanField(default=False)
 
     def __str__(self):
         return self.workout
+
+
+class Contact(models.Model):
+    first_name = models.CharField(max_length=60)
+    last_name = models.CharField(max_length=60)
+    email = models.EmailField()
+    message = models.TextField()

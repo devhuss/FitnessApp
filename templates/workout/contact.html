@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="header">
+    Please leave your full name, email, and a message with suggestions on how to improve the sites!
+    We will get back to you as soon as we can. Thank you!
+</div>
+    <br>
+    <br>
+
+
+<form action="" method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col">
+                {{ form.first_name.label }}
+                {{ form.first_name }}
+            </div>
+            <div class="col">
+                {{ form.last_name.label }}
+                {{ form.last_name }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {{ form.email.label }}
+                {{ form.email }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {{ form.message.label }}
+                {{ form.message }}
+            </div>
+        </div>
+    <br>
+        <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+
+{% endblock %}
