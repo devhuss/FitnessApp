@@ -15,11 +15,11 @@
       debitis!
     </p>
   </div>
-  <div class="col-lg-4" id="right-column"></div>
+  <div class="col-lg-4" id="right-column"><img src="{% static 'css/images/be.png' %}" class="img-fluid bg-white" alt=""></div>
 </div>
 
 
-  <div class="row border rounded-3 row bg-white my-3 py-3 px-5 mx-5 shadow p-3 mb-5 rounded">
+  <div class="row border rounded-3 row bg-white my-3 py-3 px-5 mx-5 shadow p-5 mb-5 pt-5 pb-5 bg-body rounded">
     <div class="col-lg-4" id="left-column">
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="{% static 'css/images/pic3.jpeg' %}" alt="Card image cap">
@@ -50,32 +50,21 @@
 </div>
 
 
-
+<div class="border rounded-3 row bg-white my-5 py-5 px-5 mx-5 shadow p-5 mb-5 mt-5 pt-5 bg-body rounded mt-3 pt-3">
+  <div class="col-lg-4"><img  src="{% static 'css/images/ant.jpeg' %}" class="img-fluid" alt=""></div>
+  <div class="col-lg-4"><img  src="{% static 'css/images/josh.jpeg' %}" class="img-fluid" alt=""></div>
+  <div class="col-lg-4"></div>
+</div>
 
 <div class="row justify-content-center">
   <div
     class="col-lg border bg-white border rounded-3 row bg-white my-3 py-3 px-5 mx-5 shadow p-3 mb-5 rounded"
   >
     <h1 class="display-3 text-center text-secondary text-uppercase">
-      Workouts
+      Workout With Us!
     </h1>
 
-    <form action="{% url 'search_workout' %}" method="get">
-      <div class="input-group mb-3">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Search workouts"
-          name="search-term"
-          aria-label="Search Term"
-          aria-describedby="button-addon2"
-        />
-
-        <button class="btn btn-primary" type="submit" id="button-addon2">
-          <i class="fas fa-search"></i> Search
-        </button>
-      </div>
-    </form>
+    
 
     <div class="list-group">
       {% for workout in workouts %}
@@ -106,11 +95,42 @@
         No items found with your search term, or there is no workout added yet.
       </h3>
       {% endfor %}
-    </div>
-
-    <a href="{% url 'create_workout' %}" class="btn btn-success my-3"
+      <a href="{% url 'create_workout' %}" class="btn btn-success my-3"
       ><i class="fas fa-plus"></i> Add a new workout</a
     >
+    </div>
   </div>
 </div>
+
+    <div class="row bg-gray ">
+      <hr>
+      <div class="col col-4">
+          <h1 class="display-4">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;Contact</h1>
+      </div>
+      <div class="col col-8">
+      <ul style="list-style-type: none">
+        <li> <a href="#">Chad Williams</a></li>
+        <li>Professor, Department Chair</li>
+        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+        </svg> (860) 832-2719 <br></li>
+
+        <li> <a href="#">Neva Deutsch</a></li>
+        <li>Administrative Assistant</li>
+        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+        </svg> (860) 832-2710 <br></li>
+       
+        <li>Location <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+        </svg></li>
+        <li>Maria Sanford Hall, 303</li>
+        <li>Fax: (860) 832-2712 <br></li>
+        
+        
+      </ul>
+      
+  </div>
+    </div>
+  
 {% endblock %}
