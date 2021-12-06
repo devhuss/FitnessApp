@@ -1,12 +1,11 @@
 {% extends 'base.html' %} 
- {% block title %} Workouts {% endblock %} 
- {% block body %}
+{% load static %} 
+{% block title %} Workouts {% endblock %} 
+{% block body %}
 
 <h1 class="display-4 text-center">Dashboard</h1>
 
-<div
-  class="border rounded-3 row bg-white my-3 py-3 px-5 mx-5 shadow p-3 mb-5 bg-body rounded"
->
+<div class="border rounded-3 row bg-white my-3 py-3 px-5 mx-5 shadow p-3 mb-5 bg-body rounded">
   <div class="col-lg-8" id="left-column">
     <h1 class="fw-bold text-dark text-opacity-75">*Insert Name*</h1>
     <p class="lead">
@@ -20,48 +19,38 @@
 </div>
 
 
-
-<div
-  class="border rounded-3 row bg-white my-3 py-3 px-5 mx-5 shadow p-3 mb-5 bg-body rounded"
->
-  <div class="col-lg-4" id="left-column">
-    <div class="card" style="width: 18rem">
-      <img
-        class="card-img-top"
-        src="/images/"
-        alt="Card image cap"
-      />
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
+  <div class="row border rounded-3 row bg-white my-3 py-3 px-5 mx-5 shadow p-3 mb-5 rounded">
+    <div class="col-lg-4" id="left-column">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{% static 'css/images/pic3.jpeg' %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">The Best Trainers</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="col-lg-4" id="mid-column">
-    <div class="card" style="width: 18rem">
-      <img class="card-img-top" src="..." alt="Card image cap" />
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4" id="right-column">
-    <div class="card" style="width: 18rem">
-      <img class="card-img-top" src="..." alt="Card image cap" />
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-      </div>
+</div>
+<div class="col-lg-4" id="mid-column">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{% static 'css/images/weight.jpeg' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Amazing Culture</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
   </div>
 </div>
+<div class="col-lg-4" id="right-column">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{% static 'css/images/facilities.jpeg' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">State of The Art Facility</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
 
 <div class="row justify-content-center">
   <div
