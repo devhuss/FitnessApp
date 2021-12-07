@@ -10,8 +10,9 @@ class Workout(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     workout = models.CharField(max_length=200)
     created_at = models.DateTimeField(auto_now_add=True, blank=True)
-
-    # complete = models.BooleanField(default=False)
+    # totalsets = models.CharField(max_length=200)
+    # intensity = models.CharField(max_length=200)
+    # duration = models.CharField(max_length=200)
 
     def __str__(self):
         return self.workout

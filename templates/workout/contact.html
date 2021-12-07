@@ -25,11 +25,11 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
+            <div class="col-5">
                 {{ form.email.label }}
                 {{ form.email }}
                 {% if form.email.errors %}
-                    <p>Please ensure valid you are entering a valid email: (Example: myemail@email.com)</p>
+                    <p>*Required (Example: myemail@email.com)</p>
                 {% endif %}
             </div>
 
