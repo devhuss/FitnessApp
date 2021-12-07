@@ -8,6 +8,7 @@ urlpatterns = [
     path('search', views.search_workout, name='search_workout'),
     path('update/<int:id>', views.update_workout, name='update_workout'),
     path('contact', views.contact, name='contact'),
+    path('log', views.log, name='log')
     # path('complete/<int:id>)', views.complete_workout, name='complete_workout')
 
 ]

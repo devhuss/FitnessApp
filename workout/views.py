@@ -9,9 +9,7 @@ from django.contrib.auth.decorators import login_required
 @login_required(login_url='login')
 def index(request):
     # Query the to-do table and get the todos specific for the user
-    workouts = Workout.objects.filter(user=request.user)
-    context = {'workouts': workouts}
-    return render(request, 'workout/index.html', context)
+    return render(request, 'workout/index.html')
 
 
 @login_required(login_url='login')
@@ -41,7 +39,7 @@ def search_workout(request):
 def delete_workout(request, id):
     workout_object = Workout.objects.get(id=id)
     workout_object.delete()
-    return redirect('index')
+    return redirect('log')
 
 
 @login_required(login_url='login')
@@ -50,7 +48,7 @@ def update_workout(request, id):
     form = WorkoutForm(request.POST or None, instance=task)
     if form.is_valid():
         form.save()
-        return redirect('index')
+        return redirect('log')
 
     return render(request, 'workout/update.html', {'form': form})
 
@@ -67,6 +65,18 @@ def contact(request):
 
     context = {'form': form}
     return render(request, 'workout/contact.html', context)
+
+
+@login_required(login_url='login')
+def goals(request):
+    return render(request, 'workout/goals.html')
+
+
+@login_required(login_url='login')
+def log(request):
+    workouts = Workout.objects.filter(user=request.user)
+    context = {'workouts': workouts}
+    return render(request, 'workout/log.html', context)
 #
 #
 # def complete_workout(request, id):
