@@ -2,8 +2,9 @@
 <!Doctype html>
 <html lang="en">
 <head>
+    <script src = "{% static 'css/diet.js' %}"></script>
 
-        <!-- Required meta tags -->
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,10 +23,9 @@
 </head>
 
 <body>
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top  ">
     <div class="container">
-        <a class="navbar-brand" href="{% url 'index' %}">WORKOUT APP</a>
+        <a class="navbar-brand" href="{% url 'index' %}">Beyond Elite App</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,12 +38,8 @@
                     <a class="nav-link active" href="{% url 'log' %}">Log</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Goals</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link active" href="{% url 'contact' %}">Contact us</a>
                 </li>
-
 
                 {% if user.is_authenticated %}
 
@@ -59,22 +55,16 @@
                     </ul>
 
                 {% else %}
-                    <a class="btn btn-light" href={% url 'login' %}>Login</a>
-                    <div class="m-2"></div>
-                    <a class="btn btn-light" href={% url 'register' %}>Register</a>
+                    <a class="btn btn-danger" href={% url 'login' %}>Login</a>
+                    <a class="btn btn-danger" href={% url 'register' %}>Register</a>
                 {% endif %}
-
         </div>
     </div>
 </nav>
 
-
-
 <div class="container my-5">
-
     {% block body %}
     {% endblock %}
-
 </div>
 
 <!-- Option 1: Bootstrap Bundle with Popper -->

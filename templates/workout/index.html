@@ -1,62 +1,96 @@
 {% extends 'base.html' %} 
 {% load static %} 
-{% block title %} Workouts {% endblock %} 
-{% block body %}
+{% block title %} Home {% endblock%} {% block body %}
 
 <h1 class="display-4 text-center">Dashboard</h1>
 
-<div class="border rounded-3 row bg-white my-3 py-3 px-5 mx-5 shadow p-3 mb-5 bg-body rounded">
-  <div class="col-lg-8" id="left-column">
-    <h1 class="fw-bold text-dark text-opacity-75">*Insert Name*</h1>
+<div
+  class="border rounded-3 row bg-white my-3 py-3 px-5 mx-5 shadow p-3 mb-5 bg-body rounded"
+>
+  <div class="col-md-8" id="left-column">
+    <h1 class="fw-bold text-dark text-opacity-75">Beyond Elite</h1>
     <p class="lead">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. A accusamus
-      doloremque consequatur provident beatae, culpa iure autem atque numquam,
-      dolores praesentium quos nemo? Voluptatum error odit qui nesciunt ex
-      debitis!
+      We will look at addressing your barriers to progress in terms of mindset, creating new habits that support your goals.
+      Using whatever method is most convenient to you to get you where you want to be.
+      
     </p>
   </div>
-  <div class="col-lg-4" id="right-column"><img src="{% static 'css/images/be.png' %}" class="img-fluid bg-white" alt=""></div>
+  <div class="col-md-4" id="right-column">
+    <img
+      src="{% static 'css/images/be.png' %}"
+      class="img-fluid bg-white"
+      alt=""
+    />
+  </div>
 </div>
 
-
-  <div class="row border rounded-3 row bg-white my-3 py-3 px-5 mx-5 shadow p-5 mb-5 pt-5 pb-5 bg-body rounded">
-    <div class="col-lg-4" id="left-column">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="{% static 'css/images/pic3.jpeg' %}" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">The Best Trainers</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
+<div
+  class="row border rounded-3 row bg-white my-3 py-3 px-5 mx-5 shadow p-5 mb-5 pt-5 pb-5 bg-body rounded"
+>
+<h2 class="page-header text-center display-5 text-secondary"><b>Who We Are</b></h2>
+  <div class="col-lg-4" id="left-column">
+    <div class="card" style="width: 18rem">
+      <img
+        class="card-img-top"
+        src="{% static 'css/images/pic3.jpeg' %}"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <h5 class="card-title">The Best Trainers</h5>
+        <p class="card-text">
+           Trainers that considers your individual needs and preferences, and reflects your goals. 
+        </p>
       </div>
-</div>
-<div class="col-lg-4" id="mid-column">
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="{% static 'css/images/weight.jpeg' %}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Amazing Culture</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  <div class="col-lg-4" id="mid-column">
+    <div class="card" style="width: 18rem">
+      <img
+        class="card-img-top"
+        src="{% static 'css/images/weight.jpeg' %}"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Amazing Culture</h5>
+        <p class="card-text">
+        We push each other to be the best possible versions of ourselves. Leaving no one behind.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4" id="right-column">
+    <div class="card" style="width: 18rem">
+      <img
+        class="card-img-top"
+        src="{% static 'css/images/facilities.jpeg' %}"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <h5 class="card-title">State of The Art Facility</h5>
+        <p class="card-text">
+        With our new renovated facility, we showcase state of the art equipment.
+        </p>
+      </div>
     </div>
   </div>
 </div>
-<div class="col-lg-4" id="right-column">
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="{% static 'css/images/facilities.jpeg' %}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">State of The Art Facility</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-  </div>
-</div>
-</div>
-
 
 <div class="border rounded-3 row bg-white my-5 py-5 px-5 mx-5 shadow p-5 mb-5 mt-5 pt-5 bg-body rounded mt-3 pt-3">
-  <div class="col-lg-4"><img  src="{% static 'css/images/ant.jpeg' %}" class="img-fluid" alt=""></div>
-  <div class="col-lg-4"><img  src="{% static 'css/images/josh.jpeg' %}" class="img-fluid" alt=""></div>
-  <div class="col-lg-4"></div>
+  <h2 class="page-header text-center display-5 text-secondary"> <b>Trainers</b> </h2>
+  <div class="col-md-8"><img  src="{% static 'css/images/trainers.jpeg' %}" class="img-fluid" alt=""></div>
+  <div class = "col-md-4"><p class="lead"><b class = "text-secondary">From left to right: Ant, Byron & Josh.</b> <hr> <br>
+     It goes way beyond the gym and is much deeper than simply working out.  It can apply to any aspect of your life.  Whether it be playing a sport, studying in school, applying for a job, or any given task at hand, you give it everything you’ve got. You out work everyone, and you manifest what “they” said was impossible. </p></div>
 </div>
 
-
-
+<div
+  class="col-lg border bg-white border rounded-3 row bg-white my-3 py-3 px-5 mx-5 shadow p-3 mb-5 rounded"
+>
+  <div class="row"></div>
+  <h1 class="text-center display-4 text-danger">DID YOU WORKOUT TODAY?</h1>
+  <h3 class="text-center display-6 text-secondary">Click the Button if You Did!</h3>
+  <button onclick="didYou()" class="btn btn-outline-danger">
+    Yes
+  </button>
+</div>
 
 {% endblock %}

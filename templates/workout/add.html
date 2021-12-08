@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 
 {% block title %}
-    Add new task
+    Add New Workout
 {% endblock %}
 
 {% block body %}
@@ -11,20 +11,17 @@
         <div class="col-lg-8">
             <div class="card">
                 <div class="card-header">
-                    New workout
+                    <h3>Add New Workout</h3>
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">Add a new workout</h3>
                     <form action="" method="post">
                         {% csrf_token %}
                         {{ form|crispy }}
-
-                        <button class="btn btn-primary my-3" type="submit"><i class="fas fa-save"></i> Save</button>
+                        <a href="{% url 'log' %}" class="btn btn-outline-secondary my-3"><i class="fas fa-eye"></i> View workouts</a>
+                        <button class="btn btn-danger my-3" type="submit"><i class="fas fa-save"></i> Save</button>
                     </form>
                 </div>
             </div>
-
-            <a href="{% url 'log' %}" class="btn btn-warning btn-lg my-3"><i class="fas fa-eye"></i> View workouts</a>
         </div>
     </div>
 {% endblock %}
