@@ -9,7 +9,7 @@
         <div class="col-lg border bg-white border rounded-3 row bg-white my-3 py-3 px-5 mx-5 shadow p-3 mb-5 rounded">
             <h1 class="display-3 text-center text-secondary text-uppercase">Workout Log</h1>
             <div class="rows text-center justify-content-center b-3">
-                <a href="{% url 'create_workout' %}" class="btn btn-secondary btn-lg my-3"> Add a new workout <i class="fas fa-plus"></i></a>
+                <a href="{% url 'create_workout' %}" class="btn btn-outline-danger btn-lg my-3"> Add a new workout <i class="fas fa-plus"></i></a>
             </div>
             <div class="list-group ">
                 {% for workout in workouts reversed %}
